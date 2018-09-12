@@ -13,6 +13,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -21,29 +22,42 @@
       <scope>compile</scope>
     </dependency>
 
-    <!-- Spring framework -->
+    <!-- Spring MVC -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>5.0.9.RELEASE</version>
+      <version>4.3.9.RELEASE</version>
     </dependency>
 
-    <!-- JSON databinding -->
+    <!-- JSON data binding -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.7.1-1</version>
-      <type>bundle</type>
+      <version>2.8.9</version>
     </dependency>
-    <!-- XML databinding -->
+    <!-- XML data binding -->
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
-      <artifactId>jackson-dataformats-text</artifactId>
-      <version>2.9.5</version>
-      <type>pom</type>
+      <artifactId>jackson-dataformat-xml</artifactId>
+      <version>2.8.9</version>
     </dependency>
 
   </dependencies>
 
+  <build>
+    <finalName>spring_api</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
+
+
