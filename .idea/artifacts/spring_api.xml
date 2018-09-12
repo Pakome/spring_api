@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="spring_api">
+    <output-path>$PROJECT_DIR$/classes/artifacts/spring_api</output-path>
+    <root id="archive" name="spring_api.war" />
+  </artifact>
+</component>
